@@ -21,7 +21,7 @@ const Dashboard = () => {
   async function load() {
     try {
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_API_BASE || 'http://localhost:8000'}/entries`,
+        `${process.env.NEXT_PUBLIC_API_BASE}/entries`,
 
         { credentials: 'include' }
       );
@@ -44,7 +44,7 @@ const Dashboard = () => {
   async function categoryload() {
     try {
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_API_BASE || 'http://localhost:8000'}/entries/getCategory`,
+        `${process.env.NEXT_PUBLIC_API_BASE}/entries/getCategory`,
 
         { credentials: 'include' }
       );
@@ -89,8 +89,8 @@ const Dashboard = () => {
   // Save or update entry
   async function saveEntry(data) {
     const url = editing
-      ? `${process.env.NEXT_PUBLIC_API_BASE || 'http://localhost:8000'}/entries/${editing.id}`
-      : `${process.env.NEXT_PUBLIC_API_BASE || 'http://localhost:8000'}/entries/EntryData`;
+      ? `${process.env.NEXT_PUBLIC_API_BASE}/entries/${editing.id}`
+      : `${process.env.NEXT_PUBLIC_API_BASE}/entries/EntryData`;
     const method = editing ? 'PATCH' : 'POST';
 
     const res = await fetch(url, {
@@ -114,7 +114,7 @@ const Dashboard = () => {
   async function deleteEntry(id) {
     try {
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_API_BASE || 'http://localhost:8000'}/entries/${id}`,
+        `${process.env.NEXT_PUBLIC_API_BASE}/entries/${id}`,
         { method: 'DELETE', credentials: 'include' }
       );
       if (res.ok) await load();

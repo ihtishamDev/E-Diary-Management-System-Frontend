@@ -43,7 +43,7 @@ const registerEmail = () => {
           <p className="text-center text-gray-600 max-w-md mb-6">
             Welcome to <span className="font-semibold">E-Diray Management System</span>! Before we get
             started, please confirm your email address. We’ve sent a link to{" "}
-            <span className="font-medium">user@email.com</span>.
+            <span className="font-medium">Gmail.com that you have write in registration</span>.
           </p>
 
           {/* Extra Help */}

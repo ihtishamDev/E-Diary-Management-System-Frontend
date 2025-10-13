@@ -17,7 +17,7 @@ export default function Register() {
     const onFinish = async () => {
         setLoading(true)
         const res = await fetch(
-            `${process.env.NEXT_PUBLIC_API_BASE || 'http://127.0.0.1:8000'}/auth/register`,
+            `${process.env.NEXT_PUBLIC_API_BASE}/auth/register`,
             {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },

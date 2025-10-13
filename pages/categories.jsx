@@ -90,7 +90,7 @@ const Categories = () => {
   try {
     const token = localStorage.getItem("token");
     const base =
-      process.env.NEXT_PUBLIC_API_BASE || "http://localhost:8000";
+      process.env.NEXT_PUBLIC_API_BASE;
 
     const res = await fetch(`${base}/entries/categoryName`, {
       method: "POST",
@@ -122,7 +122,7 @@ const Categories = () => {
   const handleDelete = async (id) => {
   try {
     const token = localStorage.getItem("token");
-    const base = process.env.NEXT_PUBLIC_API_BASE || "http://localhost:8000";
+    const base = process.env.NEXT_PUBLIC_API_BASE;
 
     const res = await fetch(`${base}/entries/deletecategory/${id}`, {
       method: "DELETE",
@@ -153,7 +153,7 @@ const Categories = () => {
     try {
       const token = localStorage.getItem("token");
       const base =
-        process.env.NEXT_PUBLIC_API_BASE || "http://localhost:8000";
+        process.env.NEXT_PUBLIC_API_BASE;
 
       const res = await fetch(`${base}/entriescategory/${editCategory.id}`, {
         method: "PUT",
@@ -190,7 +190,7 @@ const Categories = () => {
   const handleStatusChange = async (record, newStatus) => {
     try {
       const token = localStorage.getItem("token");
-      const base = process.env.NEXT_PUBLIC_API_BASE || "http://localhost:8000";
+      const base = process.env.NEXT_PUBLIC_API_BASE;
 
       const res = await fetch(`${base}/entries/category/${record.id}`, {
         method: "PUT",

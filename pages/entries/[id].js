@@ -8,14 +8,14 @@ export default function EntryPage() {
     const [content, setContent] = useState('')
     useEffect(() => { if (!id) return; fetchEntry() }, [id])
     async function fetchEntry() {
-        const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE || 'http://127.0.0.1:8000'}/entries/${id}`, { credentials:'include' })
+        const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE}/entries/${id}`, { credentials:'include' })
 if (res.status === 401) return r.push('/')
         if (!res.ok) return
         const data = await res.json(); setEntry(data); setTitle(data.title);
         setContent(data.content)
     }
     async function save() {
-        const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE || 'http://127.0.0.1:8000'}/entries/${id}`, { method:'PATCH', credentials:'include',
+        const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE}/entries/${id}`, { method:'PATCH', credentials:'include',
 headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({
             title,
             content
@@ -24,7 +24,7 @@ headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({
 }
 async function del() {
     if (!confirm('delete?')) return; await fetch(`$
-{process.env.NEXT_PUBLIC_API_BASE || 'http://127.0.0.1'}/entries/${id}`, {
+{process.env.NEXT_PUBLIC_API_BASE}/entries/${id}`, {
         method: 'DELETE', credentials: 'include'
     }); r.push('/dashboard')
 }

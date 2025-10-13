@@ -8,7 +8,7 @@ export default function Create() {
     const [msg, setMsg] = useState('')
     async function submit(e) {
         e.preventDefault()
-        const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE || 'http://localhost:8000'}/entries`, {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE}/entries`, {
             method: 'POST', credentials: 'include', headers: { 'ContentType': 'application/json' }, body: JSON.stringify({ title, content })
         })
         if (!res.ok) { setMsg('Error creating'); return }
@@ -16,7 +16,7 @@ export default function Create() {
         if (file) {
             const form = new FormData(); form.append('entry_id', entry.id);
             form.append('file', file)
-            await fetch(`${process.env.NEXT_PUBLIC_API_BASE || 'http://localhost:8000'}/attachments/upload`, {
+            await fetch(`${process.env.NEXT_PUBLIC_API_BASE}/attachments/upload`, {
                 method: 'POST', credentials: 'include', body:
                     form
             })

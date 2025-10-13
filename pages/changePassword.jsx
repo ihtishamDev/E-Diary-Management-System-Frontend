@@ -17,7 +17,7 @@ export default function ChangePassword() {
 
     try {
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_API_BASE || "http://localhost:8000"}/auth/changepassword`,
+        `${process.env.NEXT_PUBLIC_API_BASE}/auth/changepassword`,
         {
           method: "PUT",
           credentials: "include",

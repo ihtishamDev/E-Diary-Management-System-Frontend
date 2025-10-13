@@ -11,6 +11,7 @@ export default function Login() {
   const SearchParam = useSearchParams();
   const msg = SearchParam.get("msg"); 
   // ✅ Take values from AntD form
+  
 
   useEffect(() => {
     if (msg === "verified")
@@ -26,7 +27,7 @@ export default function Login() {
   setErr('')
   try {
     const res = await fetch(
-      `${process.env.NEXT_PUBLIC_API_BASE || 'http://localhost:8000'}/auth/login`,
+      `${process.env.NEXT_PUBLIC_API_BASE}/auth/login`,
       {
         method: 'POST',
         credentials: 'include',
@@ -215,7 +216,7 @@ export default function Login() {
             />
             <div className="space-y-4 text-center md:p-10">
               <p className="font-plus_jakarta_sans text-h3 md:text-[40px] md:leading-[45px] font-semibold text-darkGray">
-                Hello, I am Ihtisham, your write place to make your notes
+                Hello, I am M Talha Wakeel, your write place to make your notes
               </p>
               <p className="font-plus_jakarta_sans text-h6 md:text-h4 font-normal text-lightGray">
                 I will help you find the best place to practice your work and write your precious words.

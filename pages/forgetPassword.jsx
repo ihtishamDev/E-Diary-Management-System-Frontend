@@ -15,7 +15,7 @@ const forgetPassword = () => {
 
         try {
             const res = await fetch(
-                `${process.env.NEXT_PUBLIC_API_BASE || "http://127.0.0.1:8000"}/auth/forgetpassword`,
+                `${process.env.NEXT_PUBLIC_API_BASE}/auth/forgetpassword`,
                 {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },

@@ -12,7 +12,7 @@ export default function ProfileCard() {
   async function load() {
     try {
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_API_BASE || "http://localhost:8000"}/auth/getuser`,
+        `${process.env.NEXT_PUBLIC_API_BASE}/auth/getuser`,
         { credentials: "include" }
       );
       if (res.status === 401) return router.push("/");
@@ -32,7 +32,7 @@ export default function ProfileCard() {
     e.preventDefault();
     try {
       const token = localStorage.getItem("token");
-      const base = process.env.NEXT_PUBLIC_API_BASE || "http://localhost:8000";
+      const base = process.env.NEXT_PUBLIC_API_BASE;
 
       const payload = {
         name: user.name,
