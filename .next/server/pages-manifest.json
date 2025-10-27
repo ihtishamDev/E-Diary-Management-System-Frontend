@@ -2,5 +2,11 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/": "pages/index.js"
+  "/": "pages/index.js",
+  "/registerEmail": "pages/registerEmail.js",
+  "/myProfile": "pages/myProfile.js",
+  "/dashboard": "pages/dashboard.js",
+  "/changePassword": "pages/changePassword.js",
+  "/notes": "pages/notes.js",
+  "/categories": "pages/categories.js"
 }
