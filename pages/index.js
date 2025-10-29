@@ -189,7 +189,7 @@ export default function Login() {
               </div>
 
               {/* (Optional) Social login buttons */}
-              <div className="mt-6 space-y-3">
+              {/* <div className="mt-6 space-y-3">
                 <Button block className="border border-gray-400">
                   Continue with Google
                 </Button>
@@ -199,7 +199,7 @@ export default function Login() {
                 <Button block className="border border-gray-400">
                   Continue with Apple
                 </Button>
-              </div>
+              </div> */}
             </Form>
           </div>
         </div>
@@ -216,7 +216,7 @@ export default function Login() {
             />
             <div className="space-y-4 text-center md:p-10">
               <p className="font-plus_jakarta_sans text-h3 md:text-[40px] md:leading-[45px] font-semibold text-darkGray">
-                Hello, I am M Talha Wakeel, your write place to make your notes
+                Hello, I am Ihtisham Ul Haq Shami, your write place to make your notes
               </p>
               <p className="font-plus_jakarta_sans text-h6 md:text-h4 font-normal text-lightGray">
                 I will help you find the best place to practice your work and write your precious words.

@@ -1,11 +1,1 @@
-{
-  "/_app": "pages/_app.js",
-  "/_error": "pages/_error.js",
-  "/_document": "pages/_document.js",
-  "/": "pages/index.js",
-  "/registerEmail": "pages/registerEmail.js",
-  "/dashboard": "pages/dashboard.js",
-  "/categories": "pages/categories.js",
-  "/changePassword": "pages/changePassword.js",
-  "/myProfile": "pages/myProfile.js"
-}
+{"/_error":"pages/_error.js","/_app":"pages/_app.js","/categories":"pages/categories.html","/changePassword":"pages/changePassword.html","/create":"pages/create.html","/dashboard":"pages/dashboard.html","/entries/[id]":"pages/entries/[id].html","/forgetPassword":"pages/forgetPassword.html","/":"pages/index.html","/myProfile":"pages/myProfile.html","/notes":"pages/notes.html","/register":"pages/register.html","/registerEmail":"pages/registerEmail.html","/reset_password":"pages/reset_password.html","/_document":"pages/_document.js","/404":"pages/404.html"}

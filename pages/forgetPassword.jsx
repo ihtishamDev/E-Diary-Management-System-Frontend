@@ -27,7 +27,7 @@ const forgetPassword = () => {
                 const j = await res.json();
                 setMsg(j.message || "Reset link sent to your email");
                 // Optionally redirect back to login after a delay:
-                setTimeout(() => router.push("/login"), 1200);
+                setTimeout(() => router.push("/registerEmail"), 1200);
             } else {
                 const j = await res.json().catch(() => ({}));
                 setMsg(j.detail || "Something went wrong.");

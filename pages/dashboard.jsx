@@ -21,7 +21,7 @@ const Dashboard = () => {
   async function load() {
     try {
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_API_BASE}/entries`,
+        `${process.env.NEXT_PUBLIC_API_BASE}/entries/`,
 
 
         { credentials: 'include' }
