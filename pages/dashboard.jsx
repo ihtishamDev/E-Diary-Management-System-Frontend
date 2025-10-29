@@ -16,12 +16,13 @@ const Dashboard = () => {
 
   const [deleteId, setDeleteId] = useState(null);
   const [showDeleteModal, setShowDeleteModal] = useState(false);
-
+  
   // Fetch entries
   async function load() {
     try {
       const res = await fetch(
         `${process.env.NEXT_PUBLIC_API_BASE}/entries`,
+
 
         { credentials: 'include' }
       );
@@ -39,6 +40,8 @@ const Dashboard = () => {
      useEffect(() => {
     load();
     categoryload();
+    console.log("NEXT_PUBLIC_API_BASE:", process.env.NEXT_PUBLIC_API_BASE);
+
   }, []);
   
   async function categoryload() {
